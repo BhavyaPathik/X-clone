@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X.com Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="app">
+            <div id="logo">
+            <img src="logo.svg" class="icon">
+        </div> 
+        <nav class="nav">
+            <a class="tab">
+                <span>Home</span>
+            </a>
+            <a class="tab">               
+                <span>Explore</span>
+            </a>
+            <a class="tab"> 
+                <span>Notifications</span>
+            </a>
+            <a class="tab">
+                <span>Profile</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="feed">
+      <header class="feed-header">Home</header>
+
+      <section class="composer">
+        <textarea placeholder="What's happening?"></textarea>
+        <button>Post</button>
+      </section>
+
+      <section class="posts" id="posts"></section>
+    </main>
+
+    <aside class="rightbar">
+      <div class="card">Trends</div>
+      <div class="card">Who to follow</div>
+    </aside>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
