@@ -1,63 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>X.com Clone</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X.com Clone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <aside class="sidebar">
-        <div class="app">
-            <div id="logo">
-            <img src="logo-icon-pack/logo.svg" class="icon">
-        </div> 
-        <nav class="nav">
+
+ <!-- sidebar -->
+
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar_inner">
+          <div id="logo">
+            <img src="logo-icon-pack/logo.svg" class="icon" />
+          </div>
+
+          <nav class="nav">
             <a class="tab">
-              <img src="logo-icon-pack/home.svg" class="tab_side_icon">
+              <img src="logo-icon-pack/home.svg" class="tab_side_icon" />
               <span>Home</span>
             </a>
             <a class="tab">
-              <img src="logo-icon-pack/search.svg" class="tab_side_icon">               
+              <img src="logo-icon-pack/search.svg" class="tab_side_icon" />
               <span>Explore</span>
             </a>
             <a class="tab">
-              <img src="logo-icon-pack/notification.svg" class="tab_side_icon"> 
+              <img
+                src="logo-icon-pack/notification.svg"
+                class="tab_side_icon"
+              />
               <span>Notifications</span>
             </a>
             <a class="tab">
-              <img src="logo-icon-pack/follow.svg" class="tab_side_icon">
+              <img src="logo-icon-pack/follow.svg" class="tab_side_icon" />
               <span>Follow</span>
             </a>
             <a class="tab">
-              <img src="logo-icon-pack/chat.svg" class="tab_side_icon">
+              <img src="logo-icon-pack/chat.svg" class="tab_side_icon" />
               <span>Chat</span>
             </a>
             <a class="tab">
-              <img src="logo-icon-pack/profile.svg" class="tab_side_icon">
+              <img src="logo-icon-pack/profile.svg" class="tab_side_icon" />
               <span>Profile</span>
             </a>
-        </nav>
-    </aside>
+            
+            <button id="postBtn1" class="post_btn1">Post</button>
+            
+          </nav>
+        </div>
+      </aside>
 
-    <main class="feed">
-      <header class="feed-header">Home</header>
+ <!-- main center feed -->
 
-      <section class="composer">
-        <textarea placeholder="What's happening?"></textarea>
-        <button>Post</button>
-      </section>
+      <div class="main_feed">
+        <main id="feed">
+          <div class="tabs">
+            <span class="tab_btn_active">For you</span>
+            <span class="tab_btn">Following</span>
+          </div>
 
-      <section class="posts" id="posts"></section>
-    </main>
+          <div class="composer">
+            <div class="composer_body">
+              <input
+                id="tweetInput"
+                type="text"
+                placeholder="What is happening?"
+              />
+            </div>
+            <div class="composer_actions">
+              <button id="postBtn2" class="post_btn2">Post</button>
+            </div>
+          </div>
 
-    <aside class="rightbar">
-      <div class="card">Trends</div>
-      <div class="card">Who to follow</div>
-    </aside>
-  </div>
+          <div id="emptyState">
+            <span>Your timeline is empty</span>
+          </div>
 
-  <script src="app.js"></script>
-</body>
+          <div id="tweets"></div>
+        </main>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
