@@ -1,11 +1,13 @@
 const input = document.getElementById("tweetInput")
-const postBtn = document.getElementById("postBtn2")
+const postBtn = document.getElementById("postbtn2")
 const tweets = document.getElementById("tweets")
 const empty = document.getElementById("emptyState")
 
 postBtn.disabled = true
 
 input.addEventListener("input", () => {
+  input.style.height = "0px"
+  input.style.height = input.scrollHeight + "px"
   postBtn.disabled = !input.value.trim()
 })
 
@@ -18,8 +20,8 @@ postBtn.addEventListener("click", () => {
   const tweet = document.createElement("div")
   tweet.className = "tweet"
   tweet.innerHTML = `
-    <div class="tweet_avatar"> 
-        <img src="logo-icon-pack/Default_pfp.svg" />
+    <div class="tweet_avatar">
+      <img src="logo-icon-pack/Default_pfp.svg" />
     </div>
     <div class="tweet_body">
       <div class="tweet_header">
@@ -33,6 +35,8 @@ postBtn.addEventListener("click", () => {
   `
 
   tweets.prepend(tweet)
+
   input.value = ""
+  input.style.height = "0px"
   postBtn.disabled = true
 })
