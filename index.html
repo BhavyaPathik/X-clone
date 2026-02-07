@@ -1,5 +1,64 @@
 <!doctype html>
 <html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X.com Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="login">
+    <img class="logo"
+      src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png?20230728230735" alt="">
+    <div class="texts">
+      <h1 class="heading text">Happening now</h1>
+      <h2 class="welcome text">Welcome👋</h2>
+      <p class="Pick text">Pick a username to continue</p>
+      <label for="username">
+        <input class="username input" type="text" placeholder="Username">
+      </label>
+      <label for="bio">
+        <textarea class="bio input" type="text" placeholder="Bio(optional)"></textarea>
+      </label>
+      <button class="conti">Continue</button>
+    </div>
+  </div>
+  <!-- app -->
+  <div class="app hidden">
+    <aside class="sidebar">
+      <div class="app">
+        <div id="logo">
+          <img src="logo-icon-pack/logo.svg" class="icon">
+        </div>
+        <nav class="nav">
+          <a class="tab">
+            <img src="logo-icon-pack/home.svg" class="tab_side_icon">
+            <span>Home</span>
+          </a>
+          <a class="tab">
+            <img src="logo-icon-pack/search.svg" class="tab_side_icon">
+            <span>Explore</span>
+          </a>
+          <a class="tab">
+            <img src="logo-icon-pack/notification.svg" class="tab_side_icon">
+            <span>Notifications</span>
+          </a>
+          <a class="tab">
+            <img src="logo-icon-pack/follow.svg" class="tab_side_icon">
+            <span>Follow</span>
+          </a>
+          <a class="tab">
+            <img src="logo-icon-pack/chat.svg" class="tab_side_icon">
+            <span>Chat</span>
+          </a>
+          <a class="tab">
+            <img src="logo-icon-pack/profile.svg" class="tab_side_icon">
+            <span>Profile</span>
+          </a>
+        </nav>
+    </aside>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -79,6 +138,16 @@
             <span>Your timeline is empty</span>
           </div>
 
+    <aside class="rightbar">
+      <div class="card">Trends</div>
+      <div class="card">Who to follow</div>
+    </aside>
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
           <div id="tweets"></div>
         </main>
       </div>
