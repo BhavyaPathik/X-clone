@@ -11,6 +11,71 @@
 :root {
     --color: white;
 }
+
+.login{
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
+
+.logo{
+    position: relative;
+    height:400px; 
+    width: 350px;
+}
+
+.heading{
+    font-size: 62px;
+    font-weight: bold;
+}
+
+.texts{
+    position: relative;
+    top: -103px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.welcome{
+    font-size: 28px;
+    font-family: sans-serif;
+}
+
+.Pick{
+    font-size: 23px;
+}
+
+.input{
+    background-color: #0d0c0c;
+    margin-bottom: 10px;
+    color: gray;
+    width: 314px;
+    border: .5px solid #b7b4b4;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 0px;
+}
+
+.username{
+    height: 38px;
+    margin-top: 55px;
+}
+
+.bio {
+  height: 97px;
+}
+
+.conti{
+    width: 314px;
+    border-radius: 20px;
+    height: 38px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
 .app {
   display: grid;
   grid-template-columns: 275px 1fr;
@@ -333,4 +398,85 @@ body {
 .tweet_actions span:hover {
   background: rgba(29, 155, 240, 0.1);
   color: #1d9bf0;
+}
+
+.profile{
+  position: absolute;
+  top: 0px;
+  left: 402px;
+  font-size: 29px;
+  color: white;
+  border-right: 1px solid #2b2f35;
+  height: 100vh;
+  z-index: 9999;
+}
+
+.header{
+  background-color: rgba(0, 0, 0, 0.635);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 76vh;
+  height: 40px;
+  z-index: 100;
+}
+
+.u_name2{
+  font-weight: 900;
+}
+
+.p_element{
+  margin-right: 10px;
+}
+
+.profile_photo{
+  border: 2px solid gray;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  top: -90px;
+}
+
+.profile_background{
+  background-color: gray;
+  width: 76vh;
+  height: 2px;
+}
+
+.profileimg{
+  margin-top: 175px;
+  height: 73px;
+}
+
+.u_bio{
+    font-size: 16px;
+    width: 461px;
+    margin-top: 32px;
+}
+
+.date_joined{
+  color: gray;
+  font-size: 25px;
+  margin-top: 40px;
+}
+
+.profile_nav{
+  margin-top: 84px;
+  display: flex;
+  gap: 41px;
+  border-bottom: 2px solid gray;
+  height: 45px;
+  width: 76vh;
+  font-size: 22px;
+  color: gray;
+}
+
+.profile_nav_ele:hover{
+  cursor: pointer;
+  background-color: rgba(81, 80, 80, 0.269);
+}
+
+
+.hidden{
+    display: none;
 }

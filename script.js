@@ -2,6 +2,40 @@ const input = document.getElementById("tweetInput")
 const postBtn = document.getElementById("postbtn2")
 const tweets = document.getElementById("tweets")
 const empty = document.getElementById("emptyState")
+const conti = document.querySelector(".conti");
+const login = document.querySelector(".login");
+const app = document.querySelector(".app");
+const usernameInput = document.querySelector(".username"); 
+const bioInput = document.querySelector(".bio");
+const user_name = document.querySelectorAll(".u_name");
+const user_bio = document.querySelector(".u_bio");
+const date_joined = document.querySelector(".date_joined");
+const profile_nav_element = document.querySelectorAll(".profile_nav_ele")
+const userProfile = document.querySelector(".userProfile")
+const home = document.querySelector(".main_feed")
+const profile = document.querySelector(".profile")
+const userhome = document.querySelector(".userhome")
+
+let Username = "";
+
+conti.addEventListener("click",function(){
+  Username = usernameInput.value.trim();
+  const bio = bioInput.value.trim();
+  if (Username === "") {
+    alert("Please Enter a Username")
+    return;
+  }
+    
+    user_name.forEach(function(e){
+    e.innerHTML = Username;
+    });
+    user_bio.innerHTML = bio;
+    const now = new Date();
+    date_joined.textContent = `📅 Joined ${now.toDateString()} >`;
+    login.classList.toggle("hidden");
+    app.classList.remove("hidden");
+})
+console.log(Username , "cool")
 
 postBtn.disabled = true
 
@@ -25,8 +59,8 @@ postBtn.addEventListener("click", () => {
     </div>
     <div class="tweet_body">
       <div class="tweet_header">
-        <span class="tweet_name">You</span>
-        <span class="tweet_handle">@you</span>
+        <span class="tweet_name">${Username}</span>
+        <span class="tweet_handle">@${Username}</span>
         <span class="tweet_dot">·</span>
         <span class="tweet_time">now</span>
       </div>
@@ -39,4 +73,14 @@ postBtn.addEventListener("click", () => {
   input.value = ""
   input.style.height = "0px"
   postBtn.disabled = true
+})
+
+userProfile.addEventListener("click",function(){
+  profile.classList.remove("hidden")
+  home.classList.add("hidden")
+})
+
+userhome.addEventListener("click",function(){
+  profile.classList.add("hidden")
+  home.classList.remove("hidden")
 })
