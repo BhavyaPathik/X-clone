@@ -480,3 +480,90 @@ body {
 .hidden{
     display: none;
 }
+
+.tweet2 {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid #2b2f35;
+  cursor: pointer;
+}
+
+.tweet2:hover {
+  background: #080808;
+}
+
+.tweet2_avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tweet2_avatar img {
+  height: 100%;
+  width: 100%;
+}
+
+.tweet2_body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet2_header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.tweet2_name {
+  font-weight: 700;
+  color: white;
+}
+
+.tweet2_handle,
+.tweet2_dot,
+.tweet2_time {
+  color: #71767b;
+  font-weight: 400;
+}
+
+.tweet2_text {
+  margin-top: 4px;
+  font-size: 16px;
+  line-height: 1.45;
+  color: white;
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  font-family: MyFont, system-ui, sans-serif;
+}
+
+.tweet2_actions {
+  display: flex;
+  justify-content: space-between;
+  max-width: 360px;
+  margin-top: 12px;
+  color: #71767b;
+  font-size: 14px;
+}
+
+.tweet2_actions span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.tweet2_actions span:hover {
+  background: rgba(29, 155, 240, 0.1);
+  color: #1d9bf0;
+}

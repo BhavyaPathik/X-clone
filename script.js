@@ -15,6 +15,7 @@ const userProfile = document.querySelector(".userProfile")
 const home = document.querySelector(".main_feed")
 const profile = document.querySelector(".profile")
 const userhome = document.querySelector(".userhome")
+const profile_post = document.querySelector(".profile_post")
 
 let Username = "";
 
@@ -45,30 +46,37 @@ input.addEventListener("input", () => {
   postBtn.disabled = !input.value.trim()
 })
 
+function createTweet(text, className) {
+  const tweet = document.createElement("div")
+  tweet.className = className
+
+  tweet.innerHTML = `
+    <div class="${className}_avatar">
+      <img src="logo-icon-pack/Default_pfp.svg" />
+    </div>
+    <div class="${className}_body">
+      <div class="${className}_header">
+        <span class="${className}_name">${Username}</span>
+        <span class="${className}_handle">@${Username}</span>
+        <span class="${className}_dot">·</span>
+        <span class="${className}_time">now</span>
+      </div>
+      <div class="${className}_text">${text}</div>
+    </div>
+  `
+  return tweet
+}
 postBtn.addEventListener("click", () => {
   const text = input.value.trim()
   if (!text) return
 
   empty.style.display = "none"
 
-  const tweet = document.createElement("div")
-  tweet.className = "tweet"
-  tweet.innerHTML = `
-    <div class="tweet_avatar">
-      <img src="logo-icon-pack/Default_pfp.svg" />
-    </div>
-    <div class="tweet_body">
-      <div class="tweet_header">
-        <span class="tweet_name">${Username}</span>
-        <span class="tweet_handle">@${Username}</span>
-        <span class="tweet_dot">·</span>
-        <span class="tweet_time">now</span>
-      </div>
-      <div class="tweet_text">${text}</div>
-    </div>
-  `
+  const tweet = createTweet(text, "tweet")
+  const tweet2 = createTweet(text, "tweet2")
 
   tweets.prepend(tweet)
+  profile_post.prepend(tweet2)
 
   input.value = ""
   input.style.height = "0px"
