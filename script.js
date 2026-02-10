@@ -19,6 +19,9 @@ const profile_post = document.querySelector(".profile_post")
 
 let Username = "";
 
+const MAX_CHARS = 280
+const counter = document.getElementById("charCount")
+
 conti.addEventListener("click",function(){
   Username = usernameInput.value.trim();
   const bio = bioInput.value.trim();
