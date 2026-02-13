@@ -564,14 +564,15 @@ body {
   color: #1d9bf0;
 }
 
-.char_count {
+.char_counter {
   font-size: 13px;
   color: #71767b;
   margin-right: 12px;
   min-width: 32px;
+  padding-top: 9px;
   text-align: right;
 }
 
-.char_count.over {
+.char_counter.over {
   color: #f4212e;
 }

@@ -20,7 +20,7 @@ const profile_post = document.querySelector(".profile_post")
 let Username = "";
 
 const MAX_CHARS = 280
-const counter = document.getElementById("charCount")
+const counter = document.getElementById("charCounter")
 
 conti.addEventListener("click",function(){
   Username = usernameInput.value.trim();
@@ -46,7 +46,17 @@ postBtn.disabled = true
 input.addEventListener("input", () => {
   input.style.height = "0px"
   input.style.height = input.scrollHeight + "px"
-  postBtn.disabled = !input.value.trim()
+
+  const remaining = MAX_CHARS - input.value.length
+  counter.textContent = remaining
+
+  if (remaining < 0 || !input.value.trim()) {
+    postBtn.disabled = true
+    counter.classList.add("over")
+  } else {
+    postBtn.disabled = false
+    counter.classList.remove("over")
+  }
 })
 
 function createTweet(text, className) {
@@ -84,6 +94,9 @@ postBtn.addEventListener("click", () => {
   input.value = ""
   input.style.height = "0px"
   postBtn.disabled = true
+  counter.textContent = MAX_CHARS
+  counter.classList.remove("over")
+
 })
 
 userProfile.addEventListener("click",function(){
