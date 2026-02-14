@@ -5,7 +5,7 @@ const empty = document.getElementById("emptyState")
 const conti = document.querySelector(".conti");
 const login = document.querySelector(".login");
 const app = document.querySelector(".app");
-const usernameInput = document.querySelector(".username"); 
+const usernameInput = document.querySelector(".username");
 const bioInput = document.querySelector(".bio");
 const user_name = document.querySelectorAll(".u_name");
 const user_bio = document.querySelector(".u_bio");
@@ -22,24 +22,24 @@ let Username = "";
 const MAX_CHARS = 280
 const counter = document.getElementById("charCounter")
 
-conti.addEventListener("click",function(){
+conti.addEventListener("click", function () {
   Username = usernameInput.value.trim();
   const bio = bioInput.value.trim();
   if (Username === "") {
     alert("Please Enter a Username")
     return;
   }
-    
-    user_name.forEach(function(e){
+
+  user_name.forEach(function (e) {
     e.innerHTML = Username;
-    });
-    user_bio.innerHTML = bio;
-    const now = new Date();
-    date_joined.textContent = `📅 Joined ${now.toDateString()} >`;
-    login.classList.toggle("hidden");
-    app.classList.remove("hidden");
+  });
+  user_bio.innerHTML = bio;
+  const now = new Date();
+  date_joined.textContent = `📅 Joined ${now.toDateString()} >`;
+  login.classList.toggle("hidden");
+  app.classList.remove("hidden");
 })
-console.log(Username , "cool")
+console.log(Username, "cool")
 
 postBtn.disabled = true
 
@@ -58,6 +58,13 @@ input.addEventListener("input", () => {
     counter.classList.remove("over")
   }
 })
+
+const themeToggle = document.getElementById("themeToggle")
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("light")
+});
+
 
 function createTweet(text, className) {
   const tweet = document.createElement("div")
@@ -99,12 +106,12 @@ postBtn.addEventListener("click", () => {
 
 })
 
-userProfile.addEventListener("click",function(){
+userProfile.addEventListener("click", function () {
   profile.classList.remove("hidden")
   home.classList.add("hidden")
 })
 
-userhome.addEventListener("click",function(){
+userhome.addEventListener("click", function () {
   profile.classList.add("hidden")
   home.classList.remove("hidden")
 })
