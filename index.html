@@ -33,6 +33,15 @@
       </div>
     </div>
     <div class="app hidden">
+      <div class="mobile_nav">
+        <div class="mobile_tab userhome">
+          <img src="logo-icon-pack/home.svg"/>
+        </div>
+        <div class="mobile_tab userProfile">
+          <img src="logo-icon-pack/profile.svg" />
+        </div>
+      </div>
+
       <!-- sidebar -->
       <aside class="sidebar">
         <div class="sidebar_inner">
@@ -76,8 +85,13 @@
 
             <button id="postBtn1" class="post_btn1">Post</button>
 
-            <button id="themeToggle" class="post_btn1">Toggle Theme</button>
-
+            <div class="theme_row">
+              <span class="theme_text">Theme</span>
+              <label class="theme_switch">
+                <input type="checkbox" id="themeToggle" />
+                <span class="slider"></span>
+              </label>
+            </div>
           </nav>
         </div>
       </aside>

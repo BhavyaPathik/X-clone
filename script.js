@@ -11,10 +11,10 @@ const user_name = document.querySelectorAll(".u_name");
 const user_bio = document.querySelector(".u_bio");
 const date_joined = document.querySelector(".date_joined");
 const profile_nav_element = document.querySelectorAll(".profile_nav_ele")
-const userProfile = document.querySelector(".userProfile")
+const userProfile = document.querySelectorAll(".userProfile")
 const home = document.querySelector(".main_feed")
 const profile = document.querySelector(".profile")
-const userhome = document.querySelector(".userhome")
+const userhome = document.querySelectorAll(".userhome")
 const profile_post = document.querySelector(".profile_post")
 
 let Username = "";
@@ -61,9 +61,18 @@ input.addEventListener("input", () => {
 
 const themeToggle = document.getElementById("themeToggle")
 
-themeToggle.addEventListener("click", () => {
+if (localStorage.getItem("theme") === "light") {
+  document.body.classList.add("light")
+  themeToggle.checked = true
+}
+
+themeToggle.addEventListener("change", () => {
   document.body.classList.toggle("light")
-});
+
+  const theme = document.body.classList.contains("light") ? "light" : "dark"
+  localStorage.setItem("theme", theme)
+})
+
 
 
 function createTweet(text, className) {
@@ -106,12 +115,16 @@ postBtn.addEventListener("click", () => {
 
 })
 
-userProfile.addEventListener("click", function () {
-  profile.classList.remove("hidden")
-  home.classList.add("hidden")
+userProfile.forEach(btn => {
+  btn.addEventListener("click", () => {
+    profile.classList.remove("hidden")
+    home.classList.add("hidden")
+  })
 })
 
-userhome.addEventListener("click", function () {
-  profile.classList.add("hidden")
-  home.classList.remove("hidden")
+userhome.forEach(btn => {
+  btn.addEventListener("click", () => {
+    profile.classList.add("hidden")
+    home.classList.remove("hidden")
+  })
 })
