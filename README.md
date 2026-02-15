@@ -133,7 +133,7 @@ On screens ≤ 768px:
 # 🐦 X (Twitter) Clone
 
 🌐 **Live Demo:**  
-https://x-six-xi.vercel.app/
+https://bhavyapathik.github.io/Msc-Project-3/
 
 
 
